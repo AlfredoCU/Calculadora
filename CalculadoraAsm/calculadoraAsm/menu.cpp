@@ -9,6 +9,7 @@ void Menu::MenuPrincipal() {
 	char opc;
 	setlocale(LC_ALL, "spanish");
 	SetConsoleTitle(L"Calculadora en ASM");
+	system("color F");
 	do {
 		system("cls");
 		std::cout << "\t\t\t*******Calculadora en ASM*******\n\n";
