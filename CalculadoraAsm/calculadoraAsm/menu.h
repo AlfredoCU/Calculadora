@@ -4,14 +4,17 @@
 
 class Menu {
 	private:
+		double n3;
 		int n1, n2;
 		void MenuPrincipal();
 		void IngresarValores();
 		void IngresarValor();
+		void IngresarValorTri();
 		void Suma();
 		void Resta();
 		void Multiplicacion();
 		void Division();
+		void Modulo();
 		void Potencia();
 		void Raiz();
 		void Seno();

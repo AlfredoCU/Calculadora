@@ -12,16 +12,17 @@ void Menu::MenuPrincipal() {
 	do {
 		system("cls");
 		std::cout << "\t\t\t*******Calculadora en ASM*******\n\n";
-		std::cout << " A) Suma\n";
+		std::cout << " A) Suma.\n";
 		std::cout << " B) Resta.\n";
 		std::cout << " C) Multiplicación.\n";
 		std::cout << " D) División.\n";
-		std::cout << " E) Potencia.\n";
-		std::cout << " F) Raíz.\n";
-		std::cout << " G) Seno.\n";
-		std::cout << " H) Coseno.\n";
-		std::cout << " I) Tangente.\n";
-		std::cout << " J) Salir.\n\n";
+		std::cout << " E) Módulo.\n";
+		std::cout << " F) Potencia.\n";
+		std::cout << " G) Raíz.\n";
+		std::cout << " H) Seno.\n";
+		std::cout << " I) Coseno.\n";
+		std::cout << " J) Tangente.\n";
+		std::cout << " K) Salir.\n\n";
 		std::cout << " -La opción es: ";
 		std::cin >> opc;
 		opc = toupper(opc);
@@ -39,28 +40,31 @@ void Menu::MenuPrincipal() {
 			Division();
 			break;
 		case 'E':
-			Potencia();
+			Modulo();
 			break;
 		case 'F':
-			Raiz();
+			Potencia();
 			break;
 		case 'G':
-			Seno();
+			Raiz();
 			break;
 		case 'H':
-			Coseno();
+			Seno();
 			break;
 		case 'I':
-			Tangente();
+			Coseno();
 			break;
 		case 'J':
+			Tangente();
+			break;
+		case 'K':
 			EnterSarlir();
 			break;
 		default:
 			EnterOpcionInvalida();
 			break;
 		}
-	} while (opc != 'J');
+	} while (opc != 'K');
 }
 
 void Menu::IngresarValores() {
@@ -73,6 +77,11 @@ void Menu::IngresarValores() {
 void Menu::IngresarValor() {
 	std::cout << " -Ingrese el número: ";
 	std::cin >> n1;
+}
+
+void Menu::IngresarValorTri() {
+	std::cout << " -Ingrese el número: ";
+	std::cin >> n3;
 }
 
 void Menu::Suma() {
@@ -112,6 +121,19 @@ void Menu::Division() {
 	EnterContinuar();
 }
 
+void Menu::Modulo() {
+	system("cls");
+	std::cout << "\t\t\t*******Módulo*******\n\n";
+	IngresarValores();
+	if (n2 != 0) {
+		std::cout << " -El resultado de " << n1 << " % " << n2 << " = " << p.Mod(n1, n2) << "\n\n";
+	}
+	else {
+		std::cout << " -Resultado indefinido!\n\n";
+	}
+	EnterContinuar();
+}
+
 void Menu::Potencia() {
 	system("cls");
 	std::cout << "\t\t\t*******Potencia*******\n\n";
@@ -131,24 +153,24 @@ void Menu::Raiz() {
 void Menu::Seno() {
 	system("cls");
 	std::cout << "\t\t\t*******Seno*******\n\n";
-	IngresarValor();
-	std::cout << " -El resultado de " << n1 << " = " << p.Sin(n1) << "\n\n";
+	IngresarValorTri();
+	std::cout << " -El resultado de " << n3 << " = " << sin(n3) << "\n\n";
 	EnterContinuar();
 }
 
 void Menu::Coseno() {
 	system("cls");
 	std::cout << "\t\t\t*******Coseno*******\n\n";
-	IngresarValor();
-	std::cout << " -El resultado de " << n1 << " = " << p.Cos(n1) << "\n\n";
+	IngresarValorTri();
+	std::cout << " -El resultado de " << n3 << " = " << cos(n3) << "\n\n";
 	EnterContinuar();
 }
 
 void Menu::Tangente() {
 	system("cls");
 	std::cout << "\t\t\t*******Tangente*******\n\n";
-	IngresarValor();
-	std::cout << " -El resultado de " << n1 << " = " << p.Tan(n1) << "\n\n";
+	IngresarValorTri();
+	std::cout << " -El resultado de " << n3 << " = " << tan(n3) << "\n\n";
 	EnterContinuar();
 }
 

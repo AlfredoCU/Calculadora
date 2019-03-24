@@ -19,9 +19,7 @@ class Operaciones {
 		int Sub(int n1, int n2);
 		int Mul(int n1, int n2);
 		int Div(int n1, int n2);
+		int Mod(int n1, int n2);
 		int Pow(int n1, int pow);
 		int Sqrt(int n1);
-		int Sin(int n1);
-		int Cos(int n1);
-		int Tan(int n1);
 };

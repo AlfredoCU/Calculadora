@@ -57,6 +57,16 @@ int Operaciones::Div(int n1, int n2) {
 		div ecx;
 		mov n1, eax;
 	}
+}
+
+int Operaciones::Mod(int n1, int n2) {
+	_asm {
+		mov eax, n1;
+		mov ecx, n2;
+		sub edx, edx;
+		div ecx;
+		mov n1, edx;
+	}
 	return n1;
 }
 
@@ -83,25 +93,4 @@ int Operaciones::Sqrt(int n1) {
 			dec r;
 	}
 	return r;
-}
-
-int Operaciones::Sin(int n1) {
-	_asm {
-
-	}
-	return n1;
-}
-
-int Operaciones::Cos(int n1) {
-	_asm {
-
-	}
-	return n1;
-}
-
-int Operaciones::Tan(int n1) {
-	_asm {
-
-	}
-	return n1;
 }
