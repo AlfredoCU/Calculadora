@@ -94,3 +94,24 @@ int Operaciones::Sqrt(int n1) {
 	}
 	return r;
 }
+
+int Operaciones::Fac(int n1) {
+	int r;
+	_asm {
+		push eax;
+		push ebx;
+		mov eax, 1;
+		mov ebx, n1;
+		while:
+			cmp ebx, 1;
+			jle fin;
+			mul ebx;
+			dec ebx;
+			jmp while;
+		fin:
+			mov r, eax;
+			pop ebx;
+			pop eax;
+	}
+	return r;
+}

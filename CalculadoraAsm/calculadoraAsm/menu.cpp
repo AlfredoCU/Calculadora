@@ -19,10 +19,11 @@ void Menu::MenuPrincipal() {
 		std::cout << " E) Módulo.\n";
 		std::cout << " F) Potencia.\n";
 		std::cout << " G) Raíz.\n";
-		std::cout << " H) Seno.\n";
-		std::cout << " I) Coseno.\n";
-		std::cout << " J) Tangente.\n";
-		std::cout << " K) Salir.\n\n";
+		std::cout << " H) Factorial.\n";
+		std::cout << " I) Seno.\n";
+		std::cout << " J) Coseno.\n";
+		std::cout << " K) Tangente.\n";
+		std::cout << " L) Salir.\n\n";
 		std::cout << " -La opción es: ";
 		std::cin >> opc;
 		opc = toupper(opc);
@@ -49,22 +50,25 @@ void Menu::MenuPrincipal() {
 			Raiz();
 			break;
 		case 'H':
-			Seno();
+			Factorial();
 			break;
 		case 'I':
-			Coseno();
+			Seno();
 			break;
 		case 'J':
-			Tangente();
+			Coseno();
 			break;
 		case 'K':
+			Tangente();
+			break;
+		case 'L':
 			EnterSarlir();
 			break;
 		default:
 			EnterOpcionInvalida();
 			break;
 		}
-	} while (opc != 'K');
+	} while (opc != 'L');
 }
 
 void Menu::IngresarValores() {
@@ -147,6 +151,14 @@ void Menu::Raiz() {
 	std::cout << "\t\t\t*******Raíz*******\n\n";
 	IngresarValor();
 	std::cout << " -El resultado de " << n1 << " = " << p.Sqrt(n1) << "\n\n";
+	EnterContinuar();
+}
+
+void Menu::Factorial() {
+	system("cls");
+	std::cout << "\t\t\t*******Factorial*******\n\n";
+	IngresarValor();
+	std::cout << " -El resultado de " << n1 << " = " << p.Fac(n1) << "\n\n";
 	EnterContinuar();
 }
 

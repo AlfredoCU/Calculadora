@@ -15,11 +15,12 @@ class Operaciones {
 		int getNum2();
 		void setNum1(int);
 		void setNum2(int);
-		int Add(int n1, int n2);
-		int Sub(int n1, int n2);
-		int Mul(int n1, int n2);
-		int Div(int n1, int n2);
-		int Mod(int n1, int n2);
-		int Pow(int n1, int pow);
+		int Add(int, int);
+		int Sub(int, int);
+		int Mul(int, int);
+		int Div(int, int);
+		int Mod(int, int);
+		int Pow(int, int);
 		int Sqrt(int n1);
+		int Fac(int n1);
 };

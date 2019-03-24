@@ -17,6 +17,7 @@ class Menu {
 		void Modulo();
 		void Potencia();
 		void Raiz();
+		void Factorial();
 		void Seno();
 		void Coseno();
 		void Tangente();
